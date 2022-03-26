@@ -22,27 +22,29 @@ function generatePassword(){
                     alert("Please input valid value!");            
                 return generatePassword();
             };
-            var charSet = "";
+
+    var charSet = "";
+
      // Lowercase
         var confirmLow = window.confirm("Include lowercase letters in your password?")
-            if (!confirmLow) {
+            if (confirmLow) {
                 charSet = charSet.concat(lower);
             };
     // Uppercase
         var confirmUp = window.confirm("Include Uppercase letters in your password?")
-            if (!confirmUp) {
+            if (confirmUp) {
                 charSet =  charSet.concat(upper);
             };
 
     // Numbers
         var confirmNum = window.confirm("Include numbers in your password?")
-            if (!confirmNum) {
+            if (confirmNum) {
                 charSet =  charSet.concat(num);
             };
 
     //Special characters
         var confirmSpecial = window.confirm("Include special characters in your password?")
-            if (!confirmSpecial) {
+            if (confirmSpecial) {
                 charSet = charSet.concat(special);
             };
 
@@ -61,7 +63,7 @@ function generatePassword(){
        console.log(result);
      };
 
-     return newPass
+     return newPass;
 }
     // Generate password based on criteria
     var generateBtn = document.querySelector("#generate");
